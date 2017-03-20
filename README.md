@@ -14,6 +14,9 @@ In the last section we pulled the first category information as a way to categor
 
 Ok, let's explain how to pass this lab, and stick this bad boy on your refrigerator for all the world to see.
 
+<iframe height='826' scrolling='no' title='lovelace-lab' src='//codepen.io/joemburgess/embed/bqLqwL/?height=826&theme-id=dark&default-tab=html,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/joemburgess/pen/bqLqwL/'>lovelace-lab</a> by Joe Burgess (<a href='http://codepen.io/joemburgess'>@joemburgess</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
 Go ahead and select the JS tab and you'll see some Javascript code
 
 ```javascript
@@ -38,9 +41,6 @@ Go ahead and select the JS tab and you'll see some Javascript code
 	var isFourthAnswerCorrect = infoBoxTitle == "Ada, Countess of Lovelace"
 	console.log("is the fourth answer correct? " + isFourthAnswerCorrect)
 ```
-
-<iframe height='826' scrolling='no' title='lovelace-lab' src='//codepen.io/joemburgess/embed/bqLqwL/?height=826&theme-id=dark&default-tab=html,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/joemburgess/pen/bqLqwL/'>lovelace-lab</a> by Joe Burgess (<a href='http://codepen.io/joemburgess'>@joemburgess</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
 
 Ok, let's explain what's going on here.  
 
@@ -83,6 +83,10 @@ It tells us to write code to select the Ada Lovelace image.  Then it says that `
 
 Moving on, the next line says `isFirstAnswerCorrect` equals `(firstImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg")`.  This feels complicated, so let's unpack it a little.  
 
+Let's play with this in the developer console. To do that, right click and choose inspect. Then you need to tell the console you are talking to the CodePen above. Do this by selecting the drop down next to the funnel icon and choose "CodePen Preview for lovelace-lab".
+
+![Choosing CodePen](https://web-dev-readme-photos.s3.amazonaws.com/js/select-code-pen.gif)
+
 One thing we can do is paste the code into our developer console.
 
 ```javascript
@@ -113,7 +117,6 @@ Ok, so that seems to have returned an image.  Now, we're almost done.  We rememb
 	// so then the line above will evaluate to a true or false value
 	console.log("is the first answer correct? " + isFirstAnswerCorrect)
 ```
-
 Now, we should see an updated version saying: `is the first answer correct? true`
 
 Awesome. 
@@ -121,6 +124,10 @@ Awesome.
 ![You're awesome](https://web-dev-readme-photos.s3.amazonaws.com/js/extraordinary.gif)
 
 ## One More
+
+Quick reminder to make sure you're in the console in the CodePen Scope:
+
+![Codepen](https://web-dev-readme-photos.s3.amazonaws.com/js/select-code-pen.gif)
 
 OK, let's do one more together and then it's time for you to do a few on your own. 
 
