@@ -143,13 +143,7 @@ The next question is
 Again, if you copy the `==` line into your console `(mathematicianLink.href == "/wiki/Mathematician")`, you'll get `mathematicianLink is not defined`. We know this error. It means that the variable `mathematicianLink` has been set yet! Easy Peasy. Type in `var mathematicianLink = document.querySelector('body')` and you'll now have the `mathemeticianLink` variable set. We can double check by typing `mathematicianLink` and pressing enter. You'll see we get the entire body!
 That's not what we want all. We want the first link, in the first paragraph. 
 
-How do we get the first paragraph? Remember that if you just type in the tag itself you'll get the first of that tag. We want the first paragraph, which is a `p` tag. So, first let's try out `document.querySelector('p')`. If you expand that, you'll see it's this entire lab! Whoops, not quite what we want. We need to scope this down to the wikipedia body. 
-
-If you use the element inspector:
-
-![inspector](https://web-dev-readme-photos.s3.amazonaws.com/js/Element-inspector.png)
-
-And then hover over the Wikipedia text, you'll notice the entire thing is in a `div` tag with the class `mw-body`. Eureka! First let's grab the `mw-body` class using the `.`. So first of all `document.querySelector('.mw-body')`. Now we have the whole body of the wikipedia post. Let's scope it down to the first paragraph element. We can do this like so: `document.querySelector('.mw-body p')`. Look, the paragraph we care about. Finally we need to get the `a` tag. Let's keep it going with `document.querySelector('.mw-body p a')` Now we have what we are looking for. Let's bring that back into our solution
+How do we get the first paragraph? Remember that if you just type in the tag itself you'll get the first of that tag. We want the first paragraph, which is a `p` tag. So, first let's try out `document.querySelector('p')`. If you expand that, you'll see it's this entire paragraph! That's great, but what we really want is the `a` tag inside of it. Let's scope it down. `document.querySelector('p a')` Now we have what we are looking for. Let's bring that back into our solution.
 
 ```javascript
 // 2. Select the first link in the first paragraph
