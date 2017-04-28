@@ -97,17 +97,27 @@ Awesome - so pasting it into the console gives us our first error! **That's a go
 
 ![A Whole New World](https://web-dev-readme-photos.s3.amazonaws.com/js/a-whole-new-world.gif)
 
-It doesn't know about the variables in the JS Tab. So, let's first copy paste the variable setting line: `var firstImage
-= document.querySelector('body')`. This will return `undefined`. But! It did some magic. Type in `firstImage` and press Enter. Look! You just got the entire `body`. Now we know that `firstImage` has been set. Re run the original command: `firstImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"`. BOOM we got `false` as the response. That's perfect. That's what our earlier message said. `is the first answer correct?
-false`. We are on the right track. I know that the right side of the `==` is `"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"
-`. What is on the left side though? Let's type in `firstImage.src`. Ok that returns `undefined`. I would definitely say that `undefined` _does not_ equal `"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"`, wouldn't you? 
+It doesn't know about the variables in the JS Tab. So, let's first copy paste the variable setting line: 
+`var firstImage = document.querySelector('body')`. 
 
-Ok, so now let's sum up, what we learned.  The `firstImage` returns everything in the body tag, and then `firstImage.src` returns `undefined`.  Because undefined does not equal `"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"`, it makes sense that the expression `(firstImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Padlock-silver.svg/20px-Padlock-silver.svg.png")` returns `false`.  If we want it to return `true`, we should change the code such that `firstImage` actually selects the image of Ada, and ideally then the expression `firstImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"` will return `true`.  So to complete this problem we need to change the code `document.querySelector('body')` to a line that returns the image of Ada.  How do we do that?
+This will return `undefined`. But! It did some magic. Type in `firstImage` and press Enter. Look! You just got the entire `body`. Now we know that `firstImage` has been set. Re run the original command: `firstImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"`. 
+
+BOOM we got `false` as the response. That's perfect. That's what our earlier message said. 
+`is the first answer correct? false`. We are on the right track. I know that the right side of the `==` is `"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"`. 
+
+What is on the left side though? Let's type in `firstImage.src`. Ok that returns `undefined`. I would definitely say that `undefined` _does not_ equal `"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"`, wouldn't you? 
+
+Ok, so now let's sum up, what we learned.  The `firstImage` returns everything in the body tag, and then `firstImage.src` returns `undefined`.  Because undefined does not equal `"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"`, it makes sense that the expression `(firstImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Padlock-silver.svg/20px-Padlock-silver.svg.png")` returns `false`.  
+
+If we want it to return `true`, we should change the code such that `firstImage` actually selects the image of Ada, and ideally then the expression `firstImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/220px-Ada_Lovelace_portrait.jpg"` will return `true`.  So to complete this problem we need to change the code `document.querySelector('body')` to a line that returns the image of Ada.  How do we do that?
 
 Let's use the browser to guide us on what the correct selector should be. Hit the element Selector icon. It's two icons to the left of the Elements Header. Then go over Ada and click. You'll notice she has an `id` of `lovelace-image`. Remember from previous lessons, we can select that image using the `#` sign before the `lovelace-image`. Let's want to test this out in the console. Type `var firstImage = document.querySelector('#lovelace-image')`. 
 
 
-Ok, so that seems to have returned an image.  Now, we're almost done.  We remember that `true` or `false` value depends on whether that `firstImage.src` equals the line that we saw earlier.  So let's check that by typing into our console `document.querySelector('#lovelace-image').src`.  Ok, so that return value seems to match.  So we can copy that code, and move it to our HTML file, and set it equal to the   Our HTML file should now like the following: 
+Ok, so that seems to have returned an image.  Now, we're almost done.  We remember that `true` or `false` value depends on whether that `firstImage.src` equals the line that we saw earlier.  So let's check that by typing into our console `document.querySelector('#lovelace-image').src`.  Ok, so that return value seems to match.  So we can copy that code, and move it to our JS file.
+
+
+Our JS file should now like the following: 
 
 ```javascript
 // 1. Write code to select the Ada Lovelace Image here
@@ -149,7 +159,7 @@ If you use the element inspector:
 
 ![inspector](https://web-dev-readme-photos.s3.amazonaws.com/js/Element-inspector.png)
 
-And then hover over the Wikipedia text, you'll notice the entire thing is in a `div` tag with the class `mw-body`. Eureka! First let's grab the `mw-body` class using the `.`. So first of all `document.querySelector('.mw-body')`. Now we have the whole body of the wikipedia post. Let's scope it down to the first paragraph element. We can do this like so: `document.querySelector('.mw-body p')`. Look, the paragraph we care about. Finally we need to get the `a` tag. Let's keep it going with `document.querySelector('.mw-body p a')` Now we have what we are looking for. Let's bring that back into our solution
+And then hover over the first paragraph text in Wikipedia, you'll notice the entire thing is in a `div` tag with the class `mw-body`. Eureka! First let's grab the `mw-body` class using the `.`. So first of all `document.querySelector('.mw-body')`. Now we have the whole body of the wikipedia post. Let's scope it down to the first paragraph element. We can do this like so: `document.querySelector('.mw-body p')`. Look, the paragraph we care about. Finally we need to get the `a` tag. Let's keep it going with `document.querySelector('.mw-body p a')` Now we have what we are looking for. Let's bring that back into our solution
 
 ```javascript
 // 2. Select the first link in the first paragraph
