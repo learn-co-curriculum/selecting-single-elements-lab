@@ -154,7 +154,7 @@ And then hover over the Wikipedia text, you'll notice the entire thing is in a `
 ```javascript
 // 2. Select the first link in the first paragraph
 	var mathematicianLink = document.querySelector('.mw-body p a')
-	let isSecondAnswerCorrect = (mathematicianLink.href == "http://s.codepen.io/wiki/Mathematician")
+	let isSecondAnswerCorrect = (mathematicianLink.href == "https://s.codepen.io/wiki/Mathematician")
 	console.log("is the second answer correct? " + isSecondAnswerCorrect)
 ```
 
@@ -170,3 +170,5 @@ Here's what's left:
   4. Select the bold title, above the picture of Ada Lovelace, in the infobox to the right
 
 Good luck!
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/selecting-single-elements-lab'>Selecting Single Elements Lab</a> on Learn.co and start learning to code for free.</p>
