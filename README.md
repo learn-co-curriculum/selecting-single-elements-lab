@@ -148,18 +148,13 @@ The next question is
 
 Again, if you copy the `==` line into your console `(mathematicianLink.href == "/wiki/Mathematician")`, you'll get `mathematicianLink is not defined`. We know this error. It means that the variable `mathematicianLink` has not been set yet! Easy Peasy. Type in `var mathematicianLink = document.querySelector('body')` and you'll now have the `mathemeticianLink` variable set. We can double check by typing `mathematicianLink` and pressing enter. You'll see we get the entire body! That's not what we want all. We want the first link in the first paragraph. 
 
-How do we get the first paragraph? Remember that if you just type in the tag itself you'll get the first of that tag. We want the first paragraph, which is a `p` tag. So, first let's try out `document.querySelector('p')`. If you expand that, you'll see it's this entire lab! Whoops, not quite what we want. We need to scope this down to the Wikipedia body. 
+How do we get the first paragraph? Remember that if you just type in the tag itself you'll get the first of that tag. We want the first paragraph, which is a `p` tag. So, first let's try out `document.querySelector('p')`. If you expand that, you'll see it's this entire paragraph! Whoops, not quite what we want. We need to scope this down to just the first link in the first paragraph.
 
-If you use the element inspector:
-
-![inspector](https://web-dev-readme-photos.s3.amazonaws.com/js/Element-inspector.png)
-
-
-And then hover over the first paragraph of text in Wikipedia, you'll notice the entire thing is in a `div` tag with the class `mw-body`. Eureka! First let's grab the `mw-body` class using the `.`. So first of all `document.querySelector('.mw-body')`. Now we have the whole body of the wikipedia post. Let's scope it down to the first paragraph element. We can do this like so: `document.querySelector('.mw-body p')`. Look, the paragraph we care about. Finally we need to get the `a` tag. Let's keep it going with `document.querySelector('.mw-body p a')` Now we have what we are looking for. Let's bring that back into our solution.
+Since we already have the paragraph, we just need to go deeper and get the first link. Just like we got the first paragraph in the entire site like this `document.querySelector('p')`, we can get the first link, in the first paragraph like this: `document.querySelector('p a')`. If you try that in your console you'll see just the link! Now let's modify our code in the JS tab.
 
 ```javascript
 // 2. Select the first link in the first paragraph
-	var mathematicianLink = document.querySelector('.mw-body p a')
+	var mathematicianLink = document.querySelector('p a')
 	let isSecondAnswerCorrect = (mathematicianLink.href == "https://s.codepen.io/wiki/Mathematician")
 	console.log("is the second answer correct? " + isSecondAnswerCorrect)
 ```
