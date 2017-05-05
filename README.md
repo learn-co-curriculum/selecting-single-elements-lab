@@ -8,7 +8,7 @@ We are going to continue with our search engine that pulls identifying informati
 
 
 ### Your task
-In the last section we pulled the first category information as a way to categorize the topic.  In this lab, we'll use the information we learned to pull the first image in the article, an image of Ada Lovelace, a relevant link link from the first paragraph, and a few other items.
+In the last section we pulled the first category information as a way to categorize the topic.  In this lab, we'll use the information we learned to pull the first image in the article, an image of Ada Lovelace, a relevant link from the first paragraph, and a few other items.
 
 ### The rules of the lab
 
@@ -170,3 +170,5 @@ Here's what's left:
   4. Select the bold title, above the picture of Ada Lovelace, in the infobox to the right
 
 Good luck!
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/selecting-single-elements-lab'>Selecting Single Elements Lab</a> on Learn.co and start learning to code for free.</p>
