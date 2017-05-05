@@ -164,7 +164,7 @@ And then hover over the first paragraph text in Wikipedia, you'll notice the ent
 ```javascript
 // 2. Select the first link in the first paragraph
 	var mathematicianLink = document.querySelector('.mw-body p a')
-	let isSecondAnswerCorrect = (mathematicianLink.href == "http://s.codepen.io/wiki/Mathematician")
+	let isSecondAnswerCorrect = (mathematicianLink.href == "https://s.codepen.io/wiki/Mathematician")
 	console.log("is the second answer correct? " + isSecondAnswerCorrect)
 ```
 
