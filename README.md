@@ -168,7 +168,7 @@ One thing to remember is that when working through these labs, developing a proc
 Now try these on your own:
 
   3. Select the text of the first link in the first paragraph
-  4. Select the bold title, above the picture of Ada Lovelace, in the infobox to the right
+  4. Select the header "Ada Lovelace" at the top.
 
 Good luck!
 
