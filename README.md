@@ -30,7 +30,7 @@ Go ahead and select the JS tab and you'll see some Javascript code
 	// In the above line, we print out to the console whether it is a true or false statement
 // 2. Select the first link in the first paragraph
 	var mathematicianLink = document.querySelector('p a')
-	var isSecondAnswerCorrect = (mathematicianLink.href == "https://s.codepen.io/wiki/Mathematician")
+	var isSecondAnswerCorrect = (mathematicianLink.href == "http://s.codepen.io/wiki/Mathematician")
 	console.log("is the second answer correct? " + isSecondAnswerCorrect)
 // 3. Select the text of the first link in the first paragraph
 	var linkText = document.querySelector('body')
@@ -142,11 +142,11 @@ The next question is
 ```javascript
 // 2. Select the first link in the first paragraph
 	var mathematicianLink = document.querySelector('p a')
-	var isSecondAnswerCorrect = (mathematicianLink.href == "https://s.codepen.io/wiki/Mathematician")
+	var isSecondAnswerCorrect = (mathematicianLink.href == "http://s.codepen.io/wiki/Mathematician")
 	console.log("is the second answer correct? " + isSecondAnswerCorrect)
 ```
 
-Again, if you copy the `==` line into your console `(mathematicianLink.href == "https://s.codepen.io/wiki/Mathematician")`, you'll get `mathematicianLink is not defined`. We know this error. It means that the variable `mathematicianLink` has not been set yet! Easy Peasy. Type in `var mathematicianLink = document.querySelector('body')` and you'll now have the `mathemeticianLink` variable set. We can double check by typing `mathematicianLink` and pressing enter. You'll see we get the entire body! That's not what we want all. We want the first link in the first paragraph. 
+Again, if you copy the `==` line into your console `(mathematicianLink.href == "http://s.codepen.io/wiki/Mathematician")`, you'll get `mathematicianLink is not defined`. We know this error. It means that the variable `mathematicianLink` has not been set yet! Easy Peasy. Type in `var mathematicianLink = document.querySelector('body')` and you'll now have the `mathemeticianLink` variable set. We can double check by typing `mathematicianLink` and pressing enter. You'll see we get the entire body! That's not what we want all. We want the first link in the first paragraph. 
 
 How do we get the first paragraph? Remember that if you just type in the tag itself you'll get the first of that tag. We want the first paragraph, which is a `p` tag. So, first let's try out `document.querySelector('p')`. If you expand that, you'll see it's the entire paragraph! Whoops, not quite what we want. We need to scope this down to just the first link in the first paragraph.
 
@@ -155,7 +155,7 @@ Since we already have the paragraph, we just need to go deeper and get the first
 ```javascript
 // 2. Select the first link in the first paragraph
 	var mathematicianLink = document.querySelector('p a')
-	let isSecondAnswerCorrect = (mathematicianLink.href == "https://s.codepen.io/wiki/Mathematician")
+	let isSecondAnswerCorrect = (mathematicianLink.href == "http://s.codepen.io/wiki/Mathematician")
 	console.log("is the second answer correct? " + isSecondAnswerCorrect)
 ```
 
