@@ -9,7 +9,7 @@ We are going to continue with our search engine that pulls identifying informati
 
 ### Your task
 
-In the last section, we pulled the header, the text from the first link and the `href` from the first link. In this section we are going to pull the same information, but from a different simplified Wikipedia page.
+In the last section, we pulled the header, the text from the first link and the `href` from the first link. In this section we are going to pull the same information, but from a different simplified Wikipedia page. Since this is a **lab** we are going to submit our final code in the CodePen below. You will work in the Console to discover what the final solution will be, but to complete the lab, you must put your completed code in the CodePen until in the Console you see the correct answers.
 
 ### The rules of the lab
 
@@ -61,11 +61,15 @@ console.log(`The header is: ${header}`)
 
 This outputs `The header is: ENTER HEADER CODE HERE`. Do you see what happened there? The `${header}` took the contents of `header` and made sure they were sent to the console. 
 
-Our task in this lab is to modify the three variables to be the correct `querySelector` to select the correct elements. 
+Our task in this lab is to modify the three variables to be the correct `querySelector` to select the correct elements. Then the `console.log` statements will output the code we wrote. 
 
 ### All Together Now
 
-We are going to do the first one together, then you'll do the second two on your own. The first variable asks for the `querySelector` line for the header. Using the same technique you learned in the previous lesson, inspect the element and find out the `id` attribute of the header. It should be `header`. Great, now in the Console (be sure to change the top dropdown to CodePen Preview) type `document.querySelector("#header")`. That should return the correct header. This time though I want just the words "Adele Goldberg". To get just the words in an `h1` tag we are going to use the `innerHTML` attribute. 
+We are going to do the first one together, then you'll do the second two on your own. Here is your first task:
+
+**Write the `querySelector` to grab the header, then use `innerHTML` to grab the contents of the header. You should put that code in the JS tab of the CodePen where it says `"ENTER HEADER CODE HERE"`. Be sure to replace the quotes as well. If everything worked as planned your console will output `The header is: Adele Goldberg`**
+
+The first variable asks for the `querySelector` line for the header. Using the same technique you learned in the previous lesson, inspect the element and find out the `id` attribute of the header. It should be `header`. Great, now in the Console (be sure to change the top dropdown to CodePen Preview) type `document.querySelector("#header")`. That should return the correct header. This time though I want just the words "Adele Goldberg". To get just the words in an `h1` tag we are going to use the `innerHTML` attribute. 
 
  >There are a lot of attribute out there. Don't memorize them, just google around when you can't remember!
 
@@ -96,8 +100,8 @@ The first link href is: ENTER LINK HREF CODE HERE
 
 You've successfully completed the first question. Now, using what you've learned solve the next two problems:
 
- 1. Set the `linkText` variable to equal the text of the first link, which is "computer scientist"
- 2. Set the `linkHref` variable to equal the `href` of the first link, which is "https://en.wikipedia.org/wiki/Computer_scientist"
+ 1. Using the `documentSelector` and `text` attribute, set the `linkText` variable to equal the text of the first link, which is "computer scientist". This will be just like you did in the previous README. If done correctly, your console will output `the first link text is: computer scientist`.
+ 2. Using the `documentSelector` and `href` attribute, set the `linkHref` variable to equal the `href` of the first link, which is `"https://en.wikipedia.org/wiki/Computer_scientist"`. This will also be just like you did in the previous README. If done correctly, your console will output `The first link href is: https://en.wikipedia.org/wiki/Computer_scientist`.
 
 Good luck!
 
