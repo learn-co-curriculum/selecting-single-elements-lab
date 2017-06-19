@@ -9,7 +9,7 @@ We are going to continue with our search engine that pulls identifying informati
 
 ### Your task
 
-In the last section, we pulled the header, the text from the first link and the `href` from the first link. In this section we are going to pull the same information, but from a different simplified Wikipedia page. Since this is a **lab** we are going to submit our final code in the CodePen below. You will work in the Console to discover what the final solution will be, but to complete the lab, you must put your completed code in the CodePen until in the Console you see the correct answers.
+In the last section, we pulled the header, the text from the first link and the `href` from the first link. In this section we are going to pull the same information, but from a different simplified Wikipedia page. Since this is a **lab** we are going to complete our final code in the JS tab of the CodePen below. You will work in the Browser Console to discover what the final solution will be, but to complete the lab, you must put your completed code in the JS Tab of the CodePen. 
 
 ### The rules of the lab
 
@@ -45,7 +45,7 @@ The first link text is: ENTER LINK TEXT CODE HERE
 The first link href is: ENTER LINK HREF CODE HERE
 ```
 
-This is outputted by the `console.log` lines
+This is outputted by the `console.log` lines in the CodePen. The CodePen is outputting text to our Browser Console. Here is the code in the JS tab of the CodePen that outputs to the Browser Console.
 
 ```
 console.log(`The header is: ${header}`)
@@ -59,15 +59,21 @@ console.log(`The first link href is: ${linkHref}`)
 console.log(`The header is: ${header}`)
 ```
 
-This outputs `The header is: ENTER HEADER CODE HERE`. Do you see what happened there? The `${header}` took the contents of `header` and made sure they were sent to the console. 
+This outputs `The header is: ENTER HEADER CODE HERE` to the Browser Console. Do you see what happened there? The `${header}` took the contents of `header` and made sure they were sent to the console. 
 
-Our task in this lab is to modify the three variables to be the correct `querySelector` to select the correct elements. Then the `console.log` statements will output the code we wrote. 
+Our task in this lab is to modify the three variables to be the correct `querySelector` to select the correct elements. You'll know you have selected the correct elements when your Browser Console says:
+
+```
+The header is: Adele Goldberg
+The first link text is: computer scientist
+The first link href is: https://en.wikipedia.org/wiki/Computer_scientist
+```
 
 ### All Together Now
 
 We are going to do the first one together, then you'll do the second two on your own. Here is your first task:
 
-**Write the `querySelector` to grab the header, then use `innerHTML` to grab the contents of the header. You should put that code in the JS tab of the CodePen where it says `"ENTER HEADER CODE HERE"`. Be sure to replace the quotes as well. If everything worked as planned your console will output `The header is: Adele Goldberg`**
+**Write the `querySelector` to grab the header, then use `innerHTML` to grab the contents of the header. You should put that code in the JS tab of the CodePen where it says `"ENTER HEADER CODE HERE"`. Be sure to replace the quotes as well. If everything worked as planned your Browser Console will output `The header is: Adele Goldberg`**
 
 The first variable asks for the `querySelector` line for the header. Using the same technique you learned in the previous lesson, inspect the element and find out the `id` attribute of the header. It should be `header`. Great, now in the Console (be sure to change the top dropdown to CodePen Preview) type `document.querySelector("#header")`. That should return the correct header. This time though I want just the words "Adele Goldberg". To get just the words in an `h1` tag we are going to use the `innerHTML` attribute. 
 
