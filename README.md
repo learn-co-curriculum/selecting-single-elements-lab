@@ -77,7 +77,7 @@ We are going to do the first one together, then you'll do the second two on your
 
 The first variable asks for the `querySelector` line for the header. Using the same technique you learned in the previous lesson, inspect the element and find out the `id` attribute of the header. It should be `header`. Great, now in the Console (be sure to change the top dropdown to CodePen Preview) type `document.querySelector("#header")`. That should return the correct header. This time though I want just the words "Adele Goldberg". To get just the words in an `h1` tag we are going to use the `innerHTML` attribute. 
 
- >There are a lot of attribute out there. Don't memorize them, just google around when you can't remember!
+ >There are a lot of attributes out there. Don't memorize them, just google around when you can't remember!
 
 Back in the console type:
 
@@ -101,6 +101,8 @@ The header is: Adele Goldberg
 The first link text is: ENTER LINK TEXT CODE HERE
 The first link href is: ENTER LINK HREF CODE HERE
 ```
+
+***NOTE***: When an error appears in the Chrome JavaScript console, you'll notice that the error message stays visible in the console even after you've modified the code in the CodePen. This isn't necessarily a bad thing, but it can sometimes get a bit confusing if we're working on troubleshooting a new error and a bunch of old error messages are still cluttering up the console. Handily enough, Chrome provides a sweet built-in function, `clear()`, for clearing the JavaScript console. Simply enter `clear()` into the Chrome console and everything will disappear, replaced with a _`Console was cleared`_ message.
 
 ### On Your Own
 
