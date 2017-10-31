@@ -1,4 +1,6 @@
-## Selecting Elements Lab
+## Selecting Elementals Lab
+
+# Firs elemental is best elemental
 
 ### Introduction
 
