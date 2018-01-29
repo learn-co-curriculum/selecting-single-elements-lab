@@ -40,7 +40,7 @@ The first three lines are _variable definitions_. Variables in JavaScript are ju
 Open your Console by right clicking in the HTML preview (inside the red square)
 of the CodePen. From the drop-down, select "Inspect."
 
-![Screenshot of Selecting the Console](https://curriculum-content.s3.amazonaws.com/fswb-assets/selecting-single-elements-lab/selecting_inspect.png)
+![Screenshot of Selecting the Console](https://curriculum-content.s3.amazonaws.com/fswb-assets/selecting-single-elements-lab/selecting_inspect2.png)
 
 You should see a console appear at the bottom or on the side (it doesn't
 matter) of your browser that looks like this:
