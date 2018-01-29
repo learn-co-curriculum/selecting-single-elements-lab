@@ -37,7 +37,15 @@ Let's take a look at what is going on.
 
 The first three lines are _variable definitions_. Variables in Javascript are just like you remember them in Algebra. They are simply names for some sort of data. The `=` sign assigns whatever is on the right side to be held inside of whatever is on the left side. With the default code the phrase `"ENTER HEADER CODE HERE"` is held inside of the `header` variable. 
 
-If you open your Console by right clicking, select inspect, and then selecting Console you should see some output:
+If you open your Console by right clicking in the middle of the browser. From the drop-down, select "Inspect."
+
+![Screenshot of Selecting the
+Console](https://curriculum-content.s3.amazonaws.com/fswb-assets/selecting-single-elements-lab/selecting_inspect.png)
+
+You should see a console appear at the bottom or on the side (it doesn't
+matter) of your browser that looks like this:
+
+![Screenshot of Selecting the Console](https://curriculum-content.s3.amazonaws.com/fswb-assets/selecting-single-elements-lab/console_launched.png)
 
 ```
 The header is: ENTER HEADER CODE HERE
@@ -104,6 +112,48 @@ The first link href is: ENTER LINK HREF CODE HERE
 
 ***NOTE***: When an error appears in the Chrome JavaScript console, you'll notice that the error message stays visible in the console even after you've modified the code in the CodePen. This isn't necessarily a bad thing, but it can sometimes get a bit confusing if we're working on troubleshooting a new error and a bunch of old error messages are still cluttering up the console. Handily enough, Chrome provides a sweet built-in function, `clear()`, for clearing the JavaScript console. Simply enter `clear()` into the Chrome console and everything will disappear, replaced with a _`Console was cleared`_ message.
 
+As programmers, we need to get familiar with breaking things. In fact, as
+programmers, our code will spend most of it's life **not** working until
+suddenly we get a complex set of interactions right so that it **is** working.
+As a programmer thinking of yourself in "broken-land" and rejoicing only when
+you hit "working-land" will help you and your ego. Think about it: if you're
+coding while stressing about having moved from "working-land" to "broken-land"
+you're going to experience stress. Start from the opposite assumption and
+you're going to spend your days pleasantly surprised!
+
+A key help in moving us from "broken-land" to "working-land" are errors that
+appear in the Chrome console. Let's start with a common one.
+
+What if we'd changed our code to be like this:
+
+```javascript
+var header = document.querySelector("#personName-header").innerHTML
+console.log(header);
+```
+
+If we look in the HTML source, we'll see that there's no element with an
+`id` of attribute "personName-header". So our call to `querSelector()` will
+return **nothing**. So if you ask **nothing** for it's `innerHTML` attribute,
+would you expect the browser to say a "broken" thing or a "working" thing?
+
+Try changing your code and see:
+
+```text
+Uncaught TypeError: Cannot read property 'innerHTML' of null
+    at VM43 pen.js:2
+```
+
+Well `null` is like **nothing**. So the browser is telling us it couldn't find
+the `innerHMTL` property on **null**. Does that kind of seem like the error you
+might have imagined up above?
+
+Errors are our friends, here in "broken-land." Let them guide you.
+
+If you're not sure how to interpret an error, take a look at this
+[comprehensive guide to errors at MDN][mdnerrors]
+
+
+
 ### On Your Own
 
 You've successfully completed the first question. Now, using what you've learned solve the next two problems:
@@ -114,3 +164,5 @@ You've successfully completed the first question. Now, using what you've learned
 Good luck!
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/selecting-single-elements-lab'>Selecting Single Elements Lab</a> on Learn.co and start learning to code for free.</p>
+
+[mdnerrors]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors
