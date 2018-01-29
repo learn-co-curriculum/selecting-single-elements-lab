@@ -132,7 +132,7 @@ console.log(header);
 ```
 
 If we look in the HTML source, we'll see that there's no element with an
-`id` of attribute "personName-header". So our call to `querSelector()` will
+`id` of attribute "personName-header". So our call to `querySelector()` will
 return **nothing**. So if you ask **nothing** for it's `innerHTML` attribute,
 would you expect the browser to say a "broken" thing or a "working" thing?
 
