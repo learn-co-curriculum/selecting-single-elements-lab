@@ -37,8 +37,7 @@ Let's take a look at what is going on.
 
 The first three lines are _variable definitions_. Variables in JavaScript are just like you remember them in Algebra. They are simply names for some sort of data. The `=` sign assigns whatever is on the right side to be held inside of whatever is on the left side. With the default code the phrase `"ENTER HEADER CODE HERE"` is held inside of the `header` variable.
 
-Open your Console by right clicking in the HTML preview (inside the red square)
-of the CodePen. From the drop-down, select "Inspect."
+Back in the codepen above, open your Console by right clicking in the HTML preview section (you may need to click on the "Result" tab to see what is outlined in red in the screenshot below). From the drop-down, select "Inspect."
 
 ![Screenshot of Selecting the Console](https://curriculum-content.s3.amazonaws.com/fswb-assets/selecting-single-elements-lab/selecting_inspect2.png)
 
