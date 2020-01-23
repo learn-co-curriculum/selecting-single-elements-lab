@@ -143,15 +143,13 @@ Uncaught TypeError: Cannot read property 'innerHTML' of null
 ```
 
 Well `null` is like **nothing**. So the browser is telling us it couldn't find
-the `innerHMTL` property on **null**. Does that kind of seem like the error you
+the `innerHTML` property on **null**. Does that kind of seem like the error you
 might have imagined up above?
 
 Errors are our friends, here in "broken-land." Let them guide you.
 
 If you're not sure how to interpret an error, take a look at this
 [comprehensive guide to errors at MDN][mdnerrors]
-
-
 
 ### On Your Own
 
